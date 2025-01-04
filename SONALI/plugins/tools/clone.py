@@ -10,12 +10,12 @@ from pyrogram.errors.exceptions.bad_request_400 import (
     AccessTokenExpired,
     AccessTokenInvalid,
 )
-from BABYMUSIC.utils.database import get_assistant
+from SONALI.utils.database import get_assistant
 from config import API_ID, API_HASH
-from BABYMUSIC import app
+from SONALI import app
 from config import OWNER_ID
-from BABYMUSIC.misc import SUDOERS
-from BABYMUSIC.utils.database import get_assistant, clonebotdb
+from SONALI.misc import SUDOERS
+from SONALI.utils.database import get_assistant, clonebotdb
 from config import LOGGER_ID
 import requests
 
@@ -34,7 +34,7 @@ async def clone_txt(client, message):
                 API_ID,
                 API_HASH,
                 bot_token=bot_token,
-                plugins=dict(root="BABYMUSIC.cplugin"), 
+                plugins=dict(root="SONALI.cplugin"), 
             )
             await ai.start()
             bot = await ai.get_me()
